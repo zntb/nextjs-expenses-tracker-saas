@@ -1,3 +1,7 @@
+'use client';
+
+// import { deleteExpense } from '@/actions/actions';
+
 type ExpensesListProps = {
   expenses: {
     id: number;
@@ -7,26 +11,10 @@ type ExpensesListProps = {
   }[];
 };
 
-const EXPENSES = [
-  {
-    id: 1,
-    description: 'Groceries',
-    amount: 50,
-    createdAt: new Date(),
-  },
-  {
-    id: 2,
-    description: 'Utilities',
-    amount: 100,
-    createdAt: new Date(),
-  },
-];
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function ExpensesList({ expenses }: ExpensesListProps) {
   return (
     <ul className='h-[300px] bg-white rounded mt-4 shadow-md'>
-      {EXPENSES.map(expense => (
+      {expenses.map(expense => (
         <li key={expense.id} className='flex items-center px-4 py-2 border-b'>
           <p>{expense.description}</p>
           <p className='ml-auto font-bold mr-[15px]'>${expense.amount}</p>

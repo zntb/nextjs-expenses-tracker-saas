@@ -9,14 +9,13 @@ export default async function DashboardPage({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  // const paymentValueFromUrl = (await searchParams).payment;
-  const user = await checkAuthenticationAndMembership();
-  // paymentValueFromUrl === 'success' ? 5000 : 0,
-  if (!user) return redirect('/api/auth/login');
-
-  // if (paymentValueFromUrl === 'success') {
-  //   return redirect('/app/dashboard');
-  // }
+  const paymentValueFromUrl = (await searchParams).payment;
+  const user = await checkAuthenticationAndMembership(
+    paymentValueFromUrl === 'success' ? 5000 : 0,
+  );
+  if (paymentValueFromUrl === 'success') {
+    return redirect('/app/dashboard');
+  }
 
   const expenses = await prisma.expense.findMany({
     where: {

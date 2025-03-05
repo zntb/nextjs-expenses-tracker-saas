@@ -1,5 +1,5 @@
-// import PurchaseBtn from '@/components/purchase-btn';
-// import { prisma } from '@/lib/db';
+import PurchaseBtn from '@/components/purchase-btn';
+import { prisma } from '@/lib/db';
 import {
   getKindeServerSession,
   LoginLink,
@@ -11,23 +11,20 @@ import Link from 'next/link';
 export default async function Home() {
   const { isAuthenticated, getUser } = getKindeServerSession();
   const isLoggedIn = await isAuthenticated();
-  // let isPayingMember = false;
+  let isPayingMember = false;
 
   const user = await getUser();
-
-  console.log(user);
-
-  // if (user) {
-  //   const membership = await prisma.membership.findFirst({
-  //     where: {
-  //       userId: user.id,
-  //       status: 'active',
-  //     },
-  //   });
-  //   if (membership) {
-  //     isPayingMember = true;
-  //   }
-  // }
+  if (user) {
+    const membership = await prisma.membership.findFirst({
+      where: {
+        userId: user.id,
+        status: 'active',
+      },
+    });
+    if (membership) {
+      isPayingMember = true;
+    }
+  }
 
   return (
     <div className='bg-[#5DC9A8] min-h-screen flex flex-col xl:flex-row items-center justify-center gap-10'>
@@ -60,9 +57,9 @@ export default async function Home() {
                 Register
               </RegisterLink>
             </>
+          ) : !isPayingMember ? (
+            <PurchaseBtn />
           ) : (
-            // ) : !isPayingMember ? (
-            //   <PurchaseBtn />
             <Link
               href='/app/dashboard'
               className='bg-black text-white py-2 px-4 rounded-lg font-medium'

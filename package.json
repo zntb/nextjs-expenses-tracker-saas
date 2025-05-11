@@ -10,7 +10,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@kinde-oss/kinde-auth-nextjs": "^2.5.3",
+    "@kinde-oss/kinde-auth-nextjs": "^2.6.1",
     "@prisma/client": "^6.4.1",
     "next": "15.3.0",
     "posthog-js": "^1.227.0",

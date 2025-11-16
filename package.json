@@ -13,7 +13,7 @@
     "@kinde-oss/kinde-auth-nextjs": "^2.5.3",
     "@prisma/client": "^6.17.1",
     "next": "15.4.7",
-    "posthog-js": "^1.276.0",
+    "posthog-js": "^1.280.1",
     "react": "^19.0.0",
     "react-dom": "^19.2.0",
     "server-only": "^0.0.1",

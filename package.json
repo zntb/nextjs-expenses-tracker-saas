@@ -15,7 +15,7 @@
     "next": "15.4.10",
     "posthog-js": "^1.302.2",
     "react": "^19.0.0",
-    "react-dom": "^19.2.0",
+    "react-dom": "^19.2.3",
     "server-only": "^0.0.1",
     "stripe": "^17.7.0"
   },

@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@kinde-oss/kinde-auth-nextjs": "^2.5.3",
-    "@prisma/client": "^6.19.0",
+    "@prisma/client": "^6.19.1",
     "next": "15.4.10",
     "posthog-js": "^1.302.2",
     "react": "^19.0.0",

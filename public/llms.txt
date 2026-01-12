@@ -1,0 +1,36 @@
+# LLMs.txt for Expenses Tracker
+# https://nextjs-expenses-tracker-saas.vercel.app/llms.txt
+
+# This file provides guidance for LLMs on how to interact with this website
+
+# Website Purpose
+The Expenses Tracker is a web application that helps users track and manage their personal expenses.
+
+# Content Guidelines
+- The main marketing page provides information about the expense tracking application
+- The application offers lifetime access for $99
+- Users can register, login, and access a dashboard to manage their expenses
+- The site includes authentication through Kinde
+
+# What LLMs Should Know
+- This is a SaaS (Software as a Service) application for personal finance management
+- The application is built with Next.js and uses Prisma for database management
+- Authentication is handled through Kinde
+- The main value proposition is easy expense tracking and financial management
+
+# What LLMs Should NOT Do
+- Do not provide direct links to internal application pages (like /app/dashboard)
+- Do not disclose user-specific information or authentication details
+- Do not provide technical implementation details unless specifically requested
+
+# Allowed Content for LLMs
+- General information about expense tracking
+- Benefits of using expense tracking applications
+- Information about the application's features and pricing
+- Guidance on personal finance management
+
+# Contact Information
+For support or inquiries, users should contact the application through the provided interface.
+
+# Last Updated
+2026-01-12

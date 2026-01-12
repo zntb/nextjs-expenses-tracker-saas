@@ -1,0 +1,38 @@
+# robots.txt for Expenses Tracker
+# https://nextjs-expenses-tracker-saas.vercel.app/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nextjs-expenses-tracker-saas.vercel.app/sitemap.xml
+
+# Allow crawling of all pages
+Allow: /$
+Allow: /app
+Allow: /api
+
+# Disallow crawling of auth pages
+Disallow: /api/auth/
+
+# Allow major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Crawl delay for slower servers (optional)
+# Crawl-delay: 1
+
+# Host declaration (optional)
+# Host: https://nextjs-expenses-tracker-saas.vercel.app

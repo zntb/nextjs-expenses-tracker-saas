@@ -14,8 +14,67 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Expenses Tracker',
-  description: 'Track your expenses with ease!',
+  title: {
+    default: 'Expenses Tracker - Track Your Finances with Ease',
+    template: '%s | Expenses Tracker',
+  },
+  description:
+    'Easily track and manage your expenses with our powerful expense tracker app. Get lifetime access for $99 and take control of your finances today.',
+  keywords: [
+    'expenses tracker',
+    'expense management',
+    'budget tracking',
+    'personal finance',
+    'financial management',
+  ],
+  authors: [{ name: 'Expenses Tracker Team' }],
+  creator: 'Expenses Tracker',
+  publisher: 'Expenses Tracker',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://nextjs-expenses-tracker-saas.vercel.app',
+    title: 'Expenses Tracker - Track Your Finances with Ease',
+    description:
+      'Easily track and manage your expenses with our powerful expense tracker app.',
+    images: [
+      {
+        url: 'https://bytegrad.com/course-assets/youtube/expensestracker/preview.png',
+        width: 1200,
+        height: 630,
+        alt: 'Expenses Tracker App Preview',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Expenses Tracker - Track Your Finances with Ease',
+    description:
+      'Easily track and manage your expenses with our powerful expense tracker app.',
+    images: [
+      'https://bytegrad.com/course-assets/youtube/expensestracker/preview.png',
+    ],
+    creator: '@ExpensesTracker',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://nextjs-expenses-tracker-saas.vercel.app',
+  },
 };
 
 export default function RootLayout({

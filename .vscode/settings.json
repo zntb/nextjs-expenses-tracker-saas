@@ -21,5 +21,6 @@
     "posthog",
     "turbopack",
     "urlset"
-  ]
+  ],
+  "prisma.pinToPrisma6": true
 }
